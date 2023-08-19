@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <img src="1.png" width="500">
-    </body>
+    
     <head>
-        <title>NAVAN</title>
+        <link rel="icon" type="image/png" sizes="36x36" href="android-icon-36x36.png">
+        <title>
+            NAVAN
+        </title>
     </head>
-    <h1>NAVAN</h1>
-    <context-text>
-        검색할 단어 : 
-    </context-text>
-    <input id="Text"></input>
-    <button onclick="search()">검색</button>
-</div>
+    
+    <body>
+        <A href="http://naver.com"><IMG src="1.png" width="500"> </A>
+        <P>
+        <input id="Text"></input>
+        <button onclick="search()">검색</button>
+    </body>
 </html>
 
 <script>
@@ -24,12 +25,16 @@ function search() {
 </script>
                   
 <style>
+    body {
+        display:flex;
+        width:20%;
+        height:100px;    
+        align-items: center;
+        flex-direction: column;    
+    }
 context-text {
     font-size:large;
-    color:blue;
-    display:block;
-    width:20%;
-    height:100px;
+    color:black;
     background-color: antiquewhite;
     border-radius: 25px;
     margin:20px;
