@@ -2,17 +2,17 @@
 <html>
     
     <head>
-        <link rel="icon" type="image/png" sizes="36x36" href="android-icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="Files/android-icon-36x36.png">
         <title>
             NAVAN
         </title>
     </head>
     
     <body>
-        <A href="http://naver.com"><IMG src="NAVAN.png" width="350"> </A>
+        <A href="http://naver.com"><IMG src="Files/NAVAN.png" width="350"> </A>
         <P>
         <input id="Text" placeholder="검색어 입력"></input>
-        <img src="Search.png" onclick="search()" width="50"></button>
+        <img src="Files/Search.png" onclick="search()" width="50"></button>
     </body>
 </html>
 
@@ -42,10 +42,25 @@ function search() {
         height:50px;    
         align-items: center;
         flex-direction: column;
-        margin:auto
+        margin: auto;
     }
     img {
         position : relative;
         top : 20px;
+    }
+    input {
+        width: 500px;
+        padding:10px;
+        border:2px solid;
+        border-radius:5px;
+        font-size:16px;
+        color:#2DB400;
+    }
+    select {
+        width: 120px;
+        padding:10px;
+        border:2px solid;
+        border-radius:5px;
+        font-size:16px;
     }
 </style>
