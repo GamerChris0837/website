@@ -9,35 +9,43 @@
     </head>
     
     <body>
-        <A href="http://naver.com"><IMG src="1.png" width="500"> </A>
+        <A href="http://naver.com"><IMG src="NAVAN.png" width="350"> </A>
         <P>
-        <input id="Text"></input>
-        <button onclick="search()">검색</button>
+        <input id="Text" placeholder="검색어 입력"></input>
+        <img src="Search.png" onclick="search()" width="50"></button>
     </body>
 </html>
 
 <script>
 function search() {
-    a=document.getElementById("Text").value;
-
-    alert(a)
+    var link = document.getElementById('ENGINE').value;
+    link += document.getElementById('Text').value;
+    
+    location.href=link;
+    location.replace(link);
+    
+    window.open(link);
 }
-</script>
+</script> 
+
+<select id="ENGINE">
+    <option value="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=" selected="NAVER">NAVER</option>
+    <option value="https://www.google.com/search?q=">GOOGLE</option>
+    <option value="https://www.bing.com/search?q=">BING</option>
+    <option value="" disabled>???</option>
+</select>
                   
 <style>
     body {
         display:flex;
-        width:20%;
-        height:100px;    
+        width:25%;
+        height:50px;    
         align-items: center;
-        flex-direction: column;    
+        flex-direction: column;
+        margin:auto
     }
-context-text {
-    font-size:large;
-    color:black;
-    background-color: antiquewhite;
-    border-radius: 25px;
-    margin:20px;
-    padding:50px;
-}
+    img {
+        position : relative;
+        top : 20px;
+    }
 </style>
