@@ -48,12 +48,12 @@ function search() {
         top : 20px;
     }
     input {
-        width: 500px;
+        width: 270px;
         padding:10px;
         border:2px solid;
         border-radius:5px;
         font-size:16px;
-        color:#2DB400;
+        color:#36ab36;
     }
     select {
         width: 120px;
@@ -63,3 +63,83 @@ function search() {
         font-size:16px;
     }
 </style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="number"] {
+            width: 125px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            width: 147px;
+            padding: 20px;
+            background-color: #36ab36;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: xx-large;
+            outline: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>계산기</h2>
+        <input type="number" id="num1" placeholder="첫번째 숫자">
+        <input type="number" id="num2" placeholder="두번째 숫자">
+        <div>
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('minus')">-</button>
+        </div>
+        <div>
+            <button onclick="calculate('multiply')">*</button>
+            <button onclick="calculate('divide')">/</button>
+        </div>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'minus':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    result = num1 / num2;
+                    break;
+            }
+
+            document.getElementById('result').textContent = `값 : ${result}`;
+        }
+    </script>
+</body>
+</html>
