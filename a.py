@@ -17,7 +17,7 @@ async def main() -> None:
 
     for item in items:
         print(item.name, item.price)
-
+        
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
